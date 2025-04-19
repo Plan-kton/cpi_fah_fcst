@@ -50,12 +50,12 @@ st.info("""
 
 col1, col2 = st.columns(2)
 with col1:
-    oil_yoy = st.slider("Oil Prices YoY (%)", min_value=-20, max_value=20, value=0, step=1)
-    farm_yoy = st.slider("PPI Farm Products YoY (%)", min_value=-10, max_value=15, value=0, step=1)
+    oil_yoy = st.slider("Oil Prices YoY (%)", min_value=-20, max_value=100, value=0, step=1)
+    farm_yoy = st.slider("PPI Farm Products YoY (%)", min_value=-20, max_value=40, value=0, step=1)
 
 with col2:
-    food_mfg_yoy = st.slider("PPI Food Mfg YoY (%)", min_value=-4, max_value=8, value=0, step=1)
-    grocery_yoy = st.slider("PPI Grocery YoY (%)", min_value=-2, max_value=4, value=0, step=1)
+    food_mfg_yoy = st.slider("PPI Food Mfg YoY (%)", min_value=-5, max_value=15, value=0, step=1)
+    grocery_yoy = st.slider("PPI Grocery YoY (%)", min_value=-3, max_value=20, value=0, step=1)
 
 # Control variable (held constant)
 grocery_units_yoy = 0.0  # used but not exposed to user
