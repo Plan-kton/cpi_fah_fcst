@@ -48,14 +48,16 @@ st.info("""
     
     """)
 
+latest_values = df[input_columns].iloc[-1]
+
 col1, col2 = st.columns(2)
 with col1:
-    oil_yoy = st.slider("Oil Prices YoY (%)", min_value=-20, max_value=100, value=0, step=1)
-    farm_yoy = st.slider("PPI Farm Products YoY (%)", min_value=-20, max_value=40, value=0, step=1)
+    oil_yoy = st.slider("Oil Prices YoY (%)", min_value=-20, max_value=100, value=float(latest_values["Oil Prices YoY (%)"]), step=1)
+    farm_yoy = st.slider("PPI Farm Products YoY (%)", min_value=-20, max_value=40, value=float(latest_values["PPI Farm Products YoY (%)"]), step=1)
 
 with col2:
-    food_mfg_yoy = st.slider("PPI Food Mfg YoY (%)", min_value=-5, max_value=15, value=0, step=1)
-    grocery_yoy = st.slider("PPI Grocery YoY (%)", min_value=-3, max_value=20, value=0, step=1)
+    food_mfg_yoy = st.slider("PPI Food Mfg YoY (%)", min_value=-5, max_value=15, value=float(latest_values["PPI Food Mfg YoY (%)"]), step=1)
+    grocery_yoy = st.slider("PPI Grocery YoY (%)", min_value=-3, max_value=20, value=float(latest_values["PPI Grocery YoY (%)"]), step=1)
 
 # Control variable (held constant)
 grocery_units_yoy = 0.0  # used but not exposed to user
