@@ -48,7 +48,7 @@ st.info("""
     
     """)
 
-latest_values = df[input_columns].iloc[-1]
+latest_values = df["Oil Prices YoY (%)", "PPI Farm Products YoY (%)", "PPI Food Mfg YoY (%)", "PPI Grocery YoY (%)"].iloc[-1]
 
 col1, col2 = st.columns(2)
 with col1:
