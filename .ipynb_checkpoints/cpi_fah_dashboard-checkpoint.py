@@ -8,7 +8,6 @@ df = pd.read_pickle("cpi_fah_dataset.pkl")
 
 # function for drawing the input charts
 def plot_yoy_history(series, selected_value, title):
-    import matplotlib.pyplot as plt
     fig, ax = plt.subplots(figsize=(5, 2))
     ax.plot(series.index, series, color='steelblue', linewidth=2)
     ax.axhline(selected_value, color='red', linestyle='--', label=f"Selected: {selected_value}%")
