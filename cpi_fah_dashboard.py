@@ -3,8 +3,6 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-import matplotlib.pyplot as plt
-
 # Import the cpi fah forecast dataset
 df = pd.read_pickle("cpi_fah_dataset.pkl")
 
